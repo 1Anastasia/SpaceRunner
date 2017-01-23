@@ -20,9 +20,7 @@ public class Shot : MonoBehaviour
         {
             yield return new WaitForSeconds(delay);
             var shot = Instantiate(shots[Random.Range(0, shots.Count)]);
-            shot.transform.SetParent(transform, false);
-            var deltaY = speed * Time.deltaTime;
-            shot.transform.position = new Vector3(0, deltaY, 0);
+            shot.transform.position = transform.position;
         }
 
       
