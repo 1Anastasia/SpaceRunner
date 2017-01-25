@@ -9,21 +9,17 @@ public class Shot : MonoBehaviour
     public float delay = 5f;
     public float speed = 0.5F;
 
-    void Start()
+    void Update()
     {
-        StartCoroutine(Generator());
-    }
-
-    IEnumerator Generator()
-    {
-        while (true)
+        var shotGo = Input.GetKeyDown("z");
+        if (shotGo == true)
         {
-            yield return new WaitForSeconds(delay);
             var shot = Instantiate(shots[Random.Range(0, shots.Count)]);
             shot.transform.position = transform.position;
-        }
 
-      
+        }
     }
+
+
 	
 }
