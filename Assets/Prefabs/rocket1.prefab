@@ -54,6 +54,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   widthBG: 5
+  shots:
+  - {fileID: 1520210075930332, guid: fbe374bb9b363409c8e1613f90671c9b, type: 2}
+  delay: 2
+  speedS: 4
 --- !u!212 &212772284987824838
 SpriteRenderer:
   m_ObjectHideFlags: 1
